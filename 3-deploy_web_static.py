@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """creates and distributes an archive to your web servers"""
 from fabric.api import put, run, env, local
+from fabric.contrib.files import exists
 from datetime import datetime
 import os
 

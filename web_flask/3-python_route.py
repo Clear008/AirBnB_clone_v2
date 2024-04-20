@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Starts a Flask Web application """
+"""starts a Flask Web application"""
 from flask import Flask
 
 app = Flask(__name__)
@@ -13,21 +13,21 @@ def index():
 
 @app.route('/hbnb', strict_slashes=False)
 def hbnb():
-    """ display HBNB"""
+    """display HBNB"""
     return 'HBNB'
 
 
 @app.route('/c/<text>', strict_slashes=False)
 def display_c(text):
-    """ display “C ” followed by the value of the text variable"""
-    return 'C' + text.replace('_', ' ')
+    """display “C ” followed by the value of the text variable"""
+    return 'C ' + text.replace('_', ' ')
 
 
 @app.route('/python', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def display_python(text='is cool'):
-    """ display “Python ”, followed by the value of the text variable"""
-    return 'Python' + text.replace('_', ' ')
+    """display “Python ”, followed by the value of the text variable"""
+    return 'Python ' + text.replace('_', ' ')
 
 
 if __name__ == '__main__':

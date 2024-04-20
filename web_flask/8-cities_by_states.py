@@ -12,13 +12,11 @@ def tear_down(exc):
     storage.close()
 
 
-@app.route("/states_list", strict_slashes=False)
-def list_states():
-    """
-    Displays an HTML page with a list of all State objects in DBStorage.
-    """
+@app.route("/cities_by_states", strict_slashes=False)
+def states_and_cities():
+    """Displays an HTML page with a list of all states and related cities."""
     states = storage.all("State")
-    return render_template("7-states_list.html", states=states)
+    return render_template("8-cities_by_states.html", states=states)
 
 
 if __name__ == "__main__":

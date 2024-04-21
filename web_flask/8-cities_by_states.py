@@ -13,7 +13,7 @@ def tear_down(exc):
 
 
 @app.route("/cities_by_states", strict_slashes=False)
-def states_and_cities():
+def cities_by_states():
     """Displays an HTML page with a list of all states and related cities."""
     states = storage.all("State")
     return render_template("8-cities_by_states.html", states=states)

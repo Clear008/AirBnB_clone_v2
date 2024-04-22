@@ -42,7 +42,7 @@
 	border-radius: 4px;
 
 	overflow-y: auto;
-    	max-height: 300px;
+    max-height: 300px;
 }
 
 .locations:hover .popover {
